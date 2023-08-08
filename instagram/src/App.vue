@@ -1,11 +1,26 @@
 <template>
-  <div>Olá, mundo!</div>
+  <form @submit="handleLogin" class="form-login">
+    <input type="text" placeholder="Digite seu email" v-model="email" />
+    <input type="password" placeholder="Digite sua senha" v-model="password" />
+  </form>
 </template>
+
 <script>
-export default {}
+export default {
+  data() {
+    return {
+      email: '',
+      password: ''
+    }
+  },
+  methods: {
+    
+  }
+}
 </script>
+
 <style scoped>
-.formulario {
+.form-login {
   margin: 40px auto;
   width: 40%;
   border-radius: 4px;
@@ -18,7 +33,7 @@ export default {}
 }
 
 .input-area {
-  width: 80%;
+  width: 100%;
   display: flex;
   flex-direction: column;
 }
@@ -38,23 +53,5 @@ input {
   border-radius: 8px;
   border: 1px solid #756767;
   outline: none;
-}
-
-button {
-  width: 80%;
-  height: 54px;
-  background-color: #3578e5;
-  color: white;
-  font-size: 18px;
-  border-radius: 8px;
-  border: none;
-}
-
-button:hover {
-  background-color: #286ee0;
-}
-
-.input-error {
-  border-color: red;
 }
 </style>
