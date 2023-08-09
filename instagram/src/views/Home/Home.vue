@@ -1,13 +1,7 @@
 <template>
-    <div>
-        Tela Home
-    </div>
+  <div>TelaHome</div>
 </template>
 <script>
-export default {
-    
-}
+export default {}
 </script>
-<style>
-    
-</style>
+<style></style>
