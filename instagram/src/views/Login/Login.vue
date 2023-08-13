@@ -43,7 +43,7 @@ export default {
 
 <style scoped>
 .error-box {
-  background-color: tomato;
+  background-color: red;
   width: 80%;
   color: white;
 }
