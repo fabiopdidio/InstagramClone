@@ -1,11 +1,12 @@
 import { createRouter, createWebHistory } from 'vue-router'
 
-// Importar todas telas/ componentes
-import Home from '../views/Home/Home.vue'
+// Importar todas as telas/componentes
+import Home from '../views/Home/index.vue'
 import Login from '../views/Login/Login.vue'
 import SignUp from '../views/SignUp/SignUp.vue'
 
-// Criar roteamento, define URL
+// criar o roteamento da aplicação
+
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
@@ -27,5 +28,6 @@ const router = createRouter({
   ]
 })
 
-// Exportar router
+// exportar o router
+
 export default router
