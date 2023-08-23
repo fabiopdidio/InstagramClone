@@ -31,7 +31,6 @@ const router = createRouter({
       name: NewPost,
       component: NewPost
     }
-
   ]
 })
 
