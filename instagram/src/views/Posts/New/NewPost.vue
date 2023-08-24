@@ -47,6 +47,8 @@ export default {
           { abortEarly: false }
         ) // importante
 
+        const token = localStorage.getItem('instagram_token')
+
         axios({
           url: 'http://localhost:3000/api/posts',
           method: 'post',
@@ -54,8 +56,20 @@ export default {
             title: this.title,
             description: this.description,
             url: this.url
+          },
+          headers: {
+            Authorization: `Bearen ${token}`
           }
         })
+          .then(() => {
+            alert('Cadastro com sucesso')
+            this.title = ''
+            this.url = ''
+            this.description = ''
+          })
+          .catch(() => {
+            alert('Houve um erro ao realizar o cadastro')
+          })
 
         // ...............
       } catch (error) {
